@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav>
+        <div class="top container flex">
+
+            <a href="#"  onclick="reload()" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+            </a>
+
+        <div class="navbar">
+            <ul class="flex">
+                <li>
+                    <a href="#" class="nav-item" id="finance" onClick="onNavItemClick('finance')">Finance</a><!--onNavItemClick is func name and within brackets is the id-->
+                    <a href="#" class="nav-item" id="politics" onClick="onNavItemClick('politics')">Politics</a>
+                    <a href="#" class="nav-item" id="sports" onClick="onNavItemClick('sports')">Sports</a>
+                    <a href="#" class="nav-item" id="technology" onClick="onNavItemClick('technology')">Technology</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="search-bar flex">
+            <input type="text" class="news-input"  id="search-text" placeholder="e.g. Science">
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+        </div>
+    </nav>
+
+
+    <!--main section-->
+
+    <main>
+            <div class="cards-container container flex" id="cards-container">
+            </div>
+
+    </main>
+
+<!--this is just for the tempelate all the data is coming from "newsapi.org"
+     we are manipulating html using ids-->
+    <template id="template-news-card">
+        <div class="cards">
+            <div class="card-header">
+                <img src="images/logo.jpg" alt="img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">title</h3>
+                <h6 class="news-source" id="news-source">end</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing 
+                </p>
+            </div>
+        </div>    
+
+    </template>
+
+
+
+
+        
+
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
